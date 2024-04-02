@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'letrajuego';
+    src: url('fuentes/game_over.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'maquina';
+    src: url('fuentes/Sangeki.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+#fondo{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+h2{
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  color: #ff4646; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  display: inline-block;
+  margin: 0; 
+  text-align: center; 
+}
+.gif1 {
+    position: absolute;
+    left: -15vw; 
+    top: 70vh;
+    transform: scale(0.5);
+}
+.gif2 {
+    position: absolute;
+    left: 85vw; 
+    transform: scale(0.8);
+}
+#empieza {
+    position: relative;
+    transform: scale(2) translate(30%, -100%);
+    background-color: rgb(255, 96, 96);
+    z-index: 2;
+    width: 4vw;
+}
+#logout{
+    position: relative;
+    transform: scale(2) translate(30%, -100%);
+    background-color: rgb(255, 96, 96);
+    z-index: 2;
+    left:5vw;
+    width: 4vw;
+}
+#balas {
+    position: absolute;
+    top: 0.5vw;
+    left: 85vw;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+.bala {
+    width: 5vw;
+    height: 5vw;
+    margin-right: -3vw; 
+}
+#puntuacion{
+    display: flex;
+    position: absolute;
+}
+
+.gameover {
+    position: absolute;
+    display: flex;
+    margin-top: 30vh;
+    font-family: 'letrajuego';
+    font-size: 10vw;
+    background: linear-gradient(to bottom, #b31818 30%,#000000  70%);
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent;
+    z-index: inherit;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 25%;
+}
+
+#username {
+    display: inline;
+    position: absolute;
+    font-family: 'maquina';
+    color: red;
+    font-size: 2vw;
+    z-index: 2;
+    top: 90vh;
+    right: 10vw;
+	text-shadow: 0px 2px 4px white;
+}
+#totalDiv {
+    position: absolute;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    top: 5vh;
+    width: 40%;
+}
+
+
+
+
+

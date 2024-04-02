@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="principal">
+        <div id="tabla">
+            <div id="titletabla">
+                <h2>UPDATED RANKING</h2>
+                <h3>POINTS</h3>
+            </div>
+            <div id="divtabla">
+                <table id="tabla-jugadores">
+                    <thead>
+                        <tr>
+                            <th align="right">POS</th>
+                            <th align="center">PLAYER</th>
+                            <th align="left">TOTAL</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="resultados">
+                <div class="unidad" id="player1">
+                    <div class="circulo"><span>1</span></div>
+                    <div class="jugador"><span>PLAYER 1</span></div>
+                    <div class="puntos"><span>0</span></div>
+                </div>
+                <div class="unidad" id="player2">
+                    <div class="circulo"><span>2</span></div>
+                    <div class="jugador"><span>PLAYER 2</span></div>
+                    <div class="puntos"><span>0</span></div>
+                </div>
+                <div class="unidad" id="player3">
+                    <div class="circulo"><span>3</span></div>
+                    <div class="jugador"><span>PLAYER 3</span></div>
+                    <div class="puntos"><span>0</span></div>
+                </div>
+                <div class="unidad" id="player4">
+                    <div class="circulo"><span>4</span></div>
+                    <div class="jugador"><span>PLAYER 4</span></div>
+                    <div class="puntos"><span>0</span></div>
+                </div>
+                <div class="unidad" id="player5">
+                    <div class="circulo"><span>5</span></div>
+                    <div class="jugador"><span>PLAYER 5</span></div>
+                    <div class="puntos"><span>0</span></div>
+                </div>
+                
+            </div>
+            
+        </div>
+        <div id="registro">
+            <div id="formulario">
+                <div id="login">
+                    <div class="textedit" id="rellenalogin">
+                        <input type="text" placeholder="Username" class="campos">
+                        <input type="password" placeholder="Password" class="campos">
+                    </div>
+                    <div class="botones">
+                        <button class="boton" id="boton1">Sign up</button>
+                        <button class="boton" id="boton2">Sign in</button>
+                    </div>
+                </div>
+                <div id="register" class="invisible" >
+                    <div class="textedit" id="rellenaregistro">
+                        <input type="email" placeholder="Email" class="campos" id="email">
+                        <input type="text" placeholder="Username" class="campos" id="username">
+                        <input type="password" placeholder="Password" class="campos" id="password1">
+                        <button id="muestra"><img src="img/abierto.png" id="miImagen" alt="Imagen con ojo abierto" draggable="false"></button>
+                        <input type="password" placeholder="Repeat Password" class="campos" id="password2">
+                        <button id="muestra2"><img src="img/abierto.png" id="miImagen2" alt="Imagen con ojo abierto" draggable="false"></button>
+                    </div>
+                    <div class="botones">
+                        <button class="boton" id="boton3">◄ Back</button>
+                        <button class="boton" id="boton4">Sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

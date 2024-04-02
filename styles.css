@@ -1,0 +1,385 @@
+@font-face {
+    font-family: 'universitaria';
+    src:url('fuentes/varsity_regular.ttf') format('Truetype'),;
+}
+@font-face {
+    font-family: 'usuarios';
+    src:url('fuentes/KGShadowOfTheDay.ttf') format('Truetype'),;
+}
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background: linear-gradient(to right, #000000, #212e79);
+  background-size: 200% 100%;
+  animation: gradientMove 3s infinite linear;
+}
+@keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+#principal{
+    position: relative;
+    top:20vh;
+    display: flex;
+    border-radius: 2vw;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 60vw;
+    margin: 0 auto;
+}
+#tabla {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 2vw 0 0 2vw;
+    position: relative;
+    background-image: url("img/espacio.png");
+    backdrop-filter: blur(6px);
+    background-size: cover;
+}
+#tabla::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2vw 0 0 2vw;
+    background: inherit;
+    filter: blur(10px); /* Ajusta el valor del desenfoque según sea necesario */
+    z-index: -1;
+}
+#registro{
+    flex: 1;
+    border-radius: 0 2vw 2vw 0vw;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top, #6e4f80, #212e79);
+}
+#titletabla{
+    padding-left: 1vw;
+    padding-top: 2vh;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#titletabla>h2{
+    display: inline-block;
+    font-size: 160%;
+    margin-left: 1vw;
+    color: white;
+    
+}
+#titletabla>h3{
+    display: inline-block;
+    margin-left: 7vw;
+}
+#divtabla{
+    display: flex;
+    margin: 0 auto;
+    border-width:  0.2vw 0 0.2vw 0 ;
+    border-color: white;
+    border-style: solid;
+    width: 90%;
+    justify-content: center;
+
+}
+#tabla-jugadores {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    
+}
+
+#tabla-jugadores th, #tabla-jugadores td {
+    border: 2px solid #dddddd;
+    padding: 8px;
+    border-right: 2px solid #dddddd;
+    
+}
+
+#tabla-jugadores th:nth-child(2) { 
+    width: 50%;
+}
+#tabla-jugadores th:nth-child(3) { 
+    text-align: left;
+    
+}
+#tabla-jugadores th:last-child{
+    border-right: none;
+    align:left;
+}
+#tabla-jugadores th:first-child{
+    border-left: none;
+}
+
+
+.unidad{
+    padding-top: 1vh;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 1vh;
+}
+.circulo{
+    display:flex;
+    font-family:'universitaria';
+    font-size: 3vw;
+    margin-left: 8%;
+    width: 3vw;
+    height: 3vw;
+    background-color: blue;
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+}
+.circulo>span{
+    margin: 0 auto;
+    color: white;
+}
+.jugador {
+    display: grid;
+    place-items: center;
+    background-color: rgb(53, 164, 255);
+    height: 2vw;
+    width: 60%;
+    position: relative;
+    right: 0.5vw;
+    z-index: 0;
+    top: 1vh;
+    margin:0 auto;
+}
+
+.jugador>span {
+    
+    color: white;
+    font-family: 'usuarios';
+    font-size: 1.5vw;
+}
+.puntos{
+    display: flex;
+    position: relative;
+    height: 2vw;
+    right: 0.5vw;
+    border-radius: 0 5vw 5vw 0;
+    background-color: rgb(53, 164, 255);
+    width: 30%;
+    z-index: 0;
+    top:1vh;
+    align-items: center;
+    
+}
+.puntos>span{
+    color: white;
+    font-family: 'usuarios';
+    font-size: 1.5vw;
+}
+#player1>.circulo{
+    box-shadow: 2px 2px 10px 4px rgb(255, 223, 0,0.5)
+}
+#player2>.circulo{
+    box-shadow: 2px 2px 10px 4px #e3e4e5
+}
+#player3>.circulo{
+    box-shadow: 2px 2px 10px 4px #c68651
+}
+/*HASTA AQUI LA PANTALLA DE LA IZQUIERDA, AHORA VAMOS CON EL REGISTRO */
+#registro{
+    display: grid;
+    place-items: center;
+}
+#formulario{
+    width: 60%;
+    height: 60%;
+}
+.textedit{
+    margin-top:10%;
+    display: grid;
+    place-items: center;
+}
+.campos{
+    border:none;
+    outline:none;
+    background-color: transparent;
+    height: 3vh;
+    width: 70%;
+    font-size: 1vw;
+    border-bottom: 0.05vw white solid;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.15em;
+    color:white;
+}
+.campos::placeholder{
+    color:rgba(255, 255, 255, 0.274);
+}
+.textedit input:first-child{
+    margin-bottom: 3vh;
+}
+
+.botones{
+    width: 90%;
+}
+.boton{
+    margin-top: 4vh;
+    width: 35%;
+    height: 4vh;
+    background-color: rgba(48, 59, 221, 0.438);
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: white;
+    font-size: medium;
+    border: 0.5px solid white;
+    border-radius: 5%;
+    transition: transform 0.3s ease; 
+}
+.botones button:first-child{
+    margin-left: 2.5vw;
+    
+}
+.botones button:nth-child(2){
+    margin-left: 1.4vw;
+}
+.botones button:hover {
+    cursor: pointer;
+    transform: translateY(-0.5vh);
+}
+.invisible {
+    visibility: hidden; 
+    pointer-events: none; 
+}
+#register{
+    position: relative;
+    top: -21.2vh;
+}
+#rellenaregistro input:nth-child(2),
+#rellenaregistro input:nth-child(3){
+    margin-bottom: 3vh;
+}
+
+.error1{
+    margin: 0 auto;
+    display: inline-block;  
+    margin-left: 2.6vw;  
+    color: red;            
+    font-size: 0.7vw; 
+    margin-top:-4vh;    
+    font-family: 'Times New Roman', Times, serif;   
+    font-style: italic;
+}
+.error2{
+    
+    margin: 0 auto;
+    display: inline-block;  
+    margin-left: 2.6vw;  
+    color: red;            
+    font-size: 0.7vw; 
+    top:0.8vh;    
+    font-family: 'Times New Roman', Times, serif;   
+    font-style: italic;
+    
+}
+.emailAviso {
+    margin: 0 auto;
+    display: inline-block;  
+    margin-left: 2.6vw;  
+    color: red;            
+    font-size: 0.7vw; 
+    margin-top: -36vh; 
+    font-family: 'Times New Roman', Times, serif;   
+    font-style: italic;
+}
+
+.userAviso {
+    margin: 0 auto;
+    display: inline-block;  
+    margin-left: 2.6vw;  
+    color: red;            
+    font-size: 0.7vw; 
+    margin-top: -23vh; 
+    font-family: 'Times New Roman', Times, serif;   
+    font-style: italic;
+}
+
+
+.ps1Aviso {
+    margin: 0 auto;
+    display: inline-block;  
+    margin-left: 2.6vw;  
+    color: red;            
+    font-size: 0.7vw; 
+    margin-top: -9vh; 
+    font-family: 'Times New Roman', Times, serif;   
+    font-style: italic;
+}
+.ps2Aviso {
+    margin: 0 auto;
+    display: inline-block;  
+    margin-left: 2.6vw;  
+    color: red;            
+    font-size: 0.7vw; 
+    margin-top: 1vh; 
+    font-family: 'Times New Roman', Times, serif;   
+    font-style: italic;
+}
+
+#miImagen{
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+}
+#muestra{
+    max-width: 12%;
+    background-color: transparent;
+    border: none;
+    margin-top: -9vh;
+    margin-left: 11.5vw;
+}
+#muestra:hover{
+cursor: pointer;
+}
+
+#miImagen2{
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+}
+#muestra2{
+    max-width: 12%;
+    background-color: transparent;
+    border: none;
+    margin-top: -3.5vh;
+    margin-left: 11.5vw;
+}
+#muestra2:hover{
+cursor: pointer;
+}
+
+.avisoRegistro{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top:7vh;
+
+}
+
+.loginMsg{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top:10vh;
+    opacity:0.2;
+}
